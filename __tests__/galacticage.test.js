@@ -8,6 +8,6 @@ describe('GalacticAge', ()=> {
   });
 
   test('should return users earthAge', ()=> {
-    expect(currentAge.earthAge).toEqual(0);
+    expect(currentAge.earthAge).toEqual(28);
   });
 });
