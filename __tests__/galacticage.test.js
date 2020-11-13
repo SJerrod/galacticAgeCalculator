@@ -4,30 +4,30 @@ describe('GalacticAge', ()=> {
   let currentAge;
 
   beforeEach(()=> {
-    currentAge= new GalacticAge(28, "Male", "North-America")
+    currentAge= new GalacticAge(85, "Male", "South-America")
   });
 
   test('should return users earthAge', ()=> {
-    expect(currentAge.earthAge).toEqual(28);
+    expect(currentAge.earthAge).toEqual(85);
   });
 
   test('should return users mercuryAge', ()=> {
-    expect(currentAge.calcMercury()).toEqual(116.7);
+    expect(currentAge.calcMercury()).toEqual(354.2);
   })
 
   test('should return users venusAge', ()=> {
-    expect(currentAge.calcVenus()).toEqual(45.16);
+    expect(currentAge.calcVenus()).toEqual(137.1);
   })
 
   test('should return users marsAge', ()=> {
-    expect(currentAge.calcMars()).toEqual(14.89)
+    expect(currentAge.calcMars()).toEqual(45.21)
   })
 
   test('should return users jupiterAge', ()=> {
-    expect(currentAge.calcJupiter()).toEqual(2.361)
+    expect(currentAge.calcJupiter()).toEqual(7.167)
   })
 
   test('should return users lifeExpectancy', ()=> {
-    expect(currentAge.lifeExpectancy()).toEqual(49)
+    expect(currentAge.lifeExpectancy()).toEqual([13, 54.17, 20.97, 6.915, 1.096])
   })
 });

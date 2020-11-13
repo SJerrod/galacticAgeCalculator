@@ -3,12 +3,12 @@ export class GalacticAge {
     this.earthAge = earthAge;
     this.sex = sex;
     this.continent = continent;
-    this.earthRemain = 0;
-    this.earthExtra = 0
     this.mercuryAge = 0;
     this.venusAge = 0;
     this.marsAge = 0;
     this.jupiterAge = 0;
+    this.remain = [];
+    this.extra = [];
   }
 
   calcMercury(earthAge) {
@@ -30,97 +30,6 @@ export class GalacticAge {
     let age = this.earthAge / 11.86;
     return this.jupiterAge = parseFloat(age.toPrecision(4));
   }
-
-  // lifeExpectancy(earthAge, sex, continent) {
-  //   switch (this.sex) {
-  //     case ("Male"):
-  //       if (this.continent === "North-America") {
-  //         let lifeExpect = 77;
-  //         if (this.earthAge <= lifeExpect) {
-  //           let timeLeft= lifeExpect - this.earthAge;
-  //           return this.earthRemain = timeLeft;
-  //         } else {
-  //           let timeLeft = this.earthAge - lifeExpect;
-  //           return this.earthExtra = timeLeft;
-  //         }
-  //       }
-  //       break;
-  //     case ("Female"):
-  //       break;
-  //   }
-  // }
-
-  // lifeExpectancy(earthAge, sex, continent) {
-  //   switch (this.sex) {
-  //     case ("Male"):
-  //       switch (this.continent) {
-  //         case ("Africa"):
-  //           let lifeExpect = 62;
-  //           if (this.earthAge <= lifeExpect) {
-  //             let timeLeft= lifeExpect - this.earthAge;
-  //             return this.earthRemain = timeLeft;
-  //           } else {
-  //             let timeLeft = this.earthAge - lifeExpect;
-  //             return this.earthExtra = timeLeft;
-  //           }
-  //           break;
-
-  //         case ("Asia"):
-  //           let lifeExpect = 76;
-  //           if (this.earthAge <= lifeExpect) {
-  //             let timeLeft= lifeExpect - this.earthAge;
-  //             return this.earthRemain = timeLeft;
-  //           } else {
-  //             let timeLeft = this.earthAge - lifeExpect;
-  //             return this.earthExtra = timeLeft;
-  //           }
-  //           break;
-  //         case ("Australia"):
-  //           let lifeExpect = 82;
-  //           if (this.earthAge <= lifeExpect) {
-  //             let timeLeft= lifeExpect - this.earthAge;
-  //             return this.earthRemain = timeLeft;
-  //           } else {
-  //             let timeLeft = this.earthAge - lifeExpect;
-  //             return this.earthExtra = timeLeft;
-  //           }
-  //           break;
-  //         case ("Europe"):
-  //           let lifeExpect = 79;
-  //           if (this.earthAge <= lifeExpect) {
-  //             let timeLeft= lifeExpect - this.earthAge;
-  //             return this.earthRemain = timeLeft;
-  //           } else {
-  //             let timeLeft = this.earthAge - lifeExpect;
-  //             return this.earthExtra = timeLeft;
-  //           }
-  //           break;
-  //         case ("North-America"):
-  //           let lifeExpect = 77;
-  //           if (this.earthAge <= lifeExpect) {
-  //             let timeLeft= lifeExpect - this.earthAge;
-  //             return this.earthRemain = timeLeft;
-  //           } else {
-  //             let timeLeft = this.earthAge - lifeExpect;
-  //             return this.earthExtra = timeLeft;
-  //           }
-  //           break;
-  //         case ("South-America"):
-  //           let lifeExpect = 72;
-  //           if (this.earthAge <= lifeExpect) {
-  //             let timeLeft= lifeExpect - this.earthAge;
-  //             return this.earthRemain = timeLeft;
-  //           } else {
-  //             let timeLeft = this.earthAge - lifeExpect;
-  //             return this.earthExtra = timeLeft;
-  //           }
-  //         break;
-  //       }
-  //       break;
-  //     case ("Female"):
-  //       break;
-  //   }
-  // }
 
   lifeExpectancy(earthAge, sex, continent) {
     let lifeExpect = 0;
@@ -148,15 +57,46 @@ export class GalacticAge {
         }
         break;
       case ("Female"):
+        switch (this.continent) {
+          case ("Africa"):
+            lifeExpect += 65;
+            break;
+          case ("Asia"):
+            lifeExpect += 80;
+            break;
+          case ("Australia"):
+            lifeExpect += 85;
+            break;
+          case ("Europe"):
+            lifeExpect += 84;
+            break;
+          case ("North-America"):
+            lifeExpect += 81;
+            break;
+          case ("South-America"):
+            lifeExpect += 78;
+          break;
+        }
         break;
     }
     if (this.earthAge <= lifeExpect) {
       let timeLeft= lifeExpect - this.earthAge;
-      return this.earthRemain = timeLeft;
+      let earthRemain = parseFloat((timeLeft).toPrecision(4))
+      let mercuryRemain = parseFloat((timeLeft / .24).toPrecision(4))
+      let venusRemain = parseFloat((timeLeft / .62).toPrecision(4))
+      let marsRemain = parseFloat((timeLeft / 1.88).toPrecision(4))
+      let jupiterRemain = parseFloat((timeLeft / 11.86).toPrecision(4))
+      this.remain.push(earthRemain, mercuryRemain, venusRemain, marsRemain, jupiterRemain)
+      return this.remain;
     } else {
       let timeLeft = this.earthAge - lifeExpect;
-      return this.earthExtra = timeLeft;
+      let earthExtra = parseFloat((timeLeft).toPrecision(4))
+      let mercuryExtra = parseFloat((timeLeft / .24).toPrecision(4))
+      let venusExtra = parseFloat((timeLeft / .62).toPrecision(4))
+      let marsExtra = parseFloat((timeLeft / 1.88).toPrecision(4))
+      let jupiterExtra = parseFloat((timeLeft / 11.86).toPrecision(4))
+      this.extra.push(earthExtra, mercuryExtra, venusExtra, marsExtra, jupiterExtra)
+      return this.extra;
     }
   }
-
 };
