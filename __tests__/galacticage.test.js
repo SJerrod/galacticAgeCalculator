@@ -22,4 +22,8 @@ describe('GalacticAge', ()=> {
   test('should return users marsAge', ()=> {
     expect(currentAge.calcMars()).toEqual(14.89)
   })
+
+  test('should return users jupiterAge', ()=> {
+    expect(currentAge.calcJupiter()).toEqual(2.361)
+  })
 });
