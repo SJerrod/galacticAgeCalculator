@@ -22,10 +22,10 @@
 | Behavior                                                        | Input     | Output    |
 | --------------------------------------------------------------- | --------- | --------- |
 | Takes users current age and outputs as normal. | 28 | 28 |
-| Converts users current age and outputs age in Mercury years. (A Mercury year is .24 Earth years.) | 28 | 116.66 |
-| Converts users current age and outputs age in Venus years. (A Venus year is .62 Earth years.) | 28 | 45.16 |
-| Converts users current age and outputs age in Mars years. (A Mars year is 1.88 Earth years.) | 28 | 14.89 |
-| Converts users current age and outputs age in Jupiter years. (A Jupiter year is 11.86 Earth years.) | 28 | 2.36 |
+| Converts users current age and outputs age in Mercury years. (A Mercury year is .24 or (6/25) Earth years.) | 28 | 116.7 |
+| Converts users current age and outputs age in Venus years. (A Venus year is .62 or (31/50) Earth years.) | 28 | 45.16 |
+| Converts users current age and outputs age in Mars years. (A Mars year is 1.88 or (47/25) Earth years.) | 28 | 14.89 |
+| Converts users current age and outputs age in Jupiter years. (A Jupiter year is 11.86 or (593/50) Earth years.) | 28 | 2.36 |
 | Determine how many years a user has left on each planet | (lifeExpectancy - currentEarthAge)/ planetAge | timeRemaining |
 | If user currentEarthAge surpasses lifeExpectancy return number of years they have exeeded | (currentEarthAge - lifeExpectancy)/planetAge | timePassed | 
 
