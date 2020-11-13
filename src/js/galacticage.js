@@ -22,8 +22,8 @@ export class GalacticAge {
     return this.marsAge = parseFloat(age.toPrecision(4));
   }
 
-  // calcJupiter(earthAge) {
-  //   let age = this.earthAge / 11.86;
-  //   return this.jupiterAge = parseFloat(age.toPrecision(4));
-  // }
+  calcJupiter(earthAge) {
+    let age = this.earthAge / 11.86;
+    return this.jupiterAge = parseFloat(age.toPrecision(4));
+  }
 };
