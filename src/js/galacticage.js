@@ -3,6 +3,7 @@ export class GalacticAge {
     this.earthAge = earthAge;
     this.mercuryAge = 0;
     this.venusAge = 0;
+    this.marsAge = 0;
   }
 
   calcMercury(earthAge) {
@@ -13,5 +14,10 @@ export class GalacticAge {
   calcVenus(earthAge) {
     let age = this.earthAge / (31/50);
     return this.venusAge = parseFloat(age.toPrecision(4));
+  }
+
+  calcMars(earthAge) {
+    let age = this.earthAge / (47/25);
+    return this.marsAge = parseFloat(age.toPrecision(4));
   }
 };
