@@ -4,7 +4,7 @@ describe('GalacticAge', ()=> {
   let currentAge;
 
   beforeEach(()=> {
-    currentAge= new GalacticAge(28)
+    currentAge= new GalacticAge(28, "Male", "North-America")
   });
 
   test('should return users earthAge', ()=> {
@@ -25,5 +25,9 @@ describe('GalacticAge', ()=> {
 
   test('should return users jupiterAge', ()=> {
     expect(currentAge.calcJupiter()).toEqual(2.361)
+  })
+
+  test('should return users lifeExpectancy', ()=> {
+    expect(currentAge.lifeExpectancy()).toEqual(49)
   })
 });
