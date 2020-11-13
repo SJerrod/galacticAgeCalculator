@@ -12,6 +12,6 @@ describe('GalacticAge', ()=> {
   });
 
   test('should return users mercuryAge', ()=> {
-    expect(currentAge.mercuryAge).toEqual(116.6)
+    expect(currentAge.calcMercury()).toEqual(116.7)
   })
 });
