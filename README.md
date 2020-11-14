@@ -15,7 +15,7 @@
 - In the terminal type npm install to install necessary plugins 
 - Alternetivly click the Set up in Desktop button
 - Open the index file to view site
-- [Click to open active site in Github](gh-pages-link) Or simply paste the following url into your prefered browser gh-pages-link to view the active page on Github
+- [Click to open active site in Github](https://sjerrod.github.io/galacticAgeCalculator/) Or simply paste the following url into your prefered browser https://sjerrod.github.io/galacticAgeCalculator/ to view the active page on Github
 
 ## Specifications
 
