@@ -28,6 +28,6 @@ describe('GalacticAge', ()=> {
   })
 
   test('should return users lifeExpectancy', ()=> {
-    expect(currentAge.lifeExpectancy()).toEqual([13, 54.17, 20.97, 6.915, 1.096])
+    expect(currentAge.lifeExpectancy()).toEqual(true)
   })
 });
