@@ -9,13 +9,29 @@
 
 ## Setup
 
+#### _Things You Need_
+ * A prefered Internet Browser
+ * A code Editor to view the code 
+
+ #### _To Open Locally_
+
 - [Click to view Github repository](https://github.com/SJerrod/galacticAgeCalculator) Or simply paste the following url into your prefered browser https://github.com/SJerrod/galacticAgeCalculator
-- To Clone repository simply click the green Code button and copy the url
-- Using a prefered terminal type command 'git clone paste-url-here
-- In the terminal type npm install to install necessary plugins 
-- Alternetivly click the Set up in Desktop button
-- Open the index file to view site
-- [Click to open active site in Github](https://sjerrod.github.io/galacticAgeCalculator/) Or simply paste the following url into your prefered browser https://sjerrod.github.io/galacticAgeCalculator/ to view the active page on Github
+- To Clone repository simply click the green Code button and copy the url.
+- Using a prefered terminal use the command 'git clone paste-url-here' in which ever directory you wish.
+- Open the newly cloned repo with your text editor.
+- In the terminal use the command 'npm install' to install all necessary packages for this project.
+- Now use the command 'npm start' to start a live server
+
+<details>
+  <summary>Note to Apple Users</summary>
+
+    - Under package.json navigate to "scripts"
+    - Navigate to "start", the & needs to be replaced with ;
+    Before
+    "scripts": {... "start": "npm run build & webpack-dev-server --open --mode development",
+    After
+    "scripts": {... "start": "npm run build; webpack-dev-server --open --mode development",
+  </details>
 
 ## Specifications
 
