@@ -27,7 +27,6 @@ describe('GalacticAge', ()=> {
     expect(currentAge.calcJupiter()).toEqual(7.167)
   })
 
-  // As this test doesnt return a value I just added a Return. Also as switch Cases dont get read this seemed like the only logical approach to get 100% coverage.
   test('should return users lifeExpectancy', ()=> {
     let test1 = new GalacticAge(30, "Male", "Africa");
     let test2 = new GalacticAge(30, "Male", "Asia");
