@@ -88,7 +88,7 @@ export class GalacticAge {
       let jupiterRemain = parseFloat((timeLeft / 11.86).toPrecision(4));
       this.extra.push("No", "No", "No", "No", "No");
       this.remain.push(earthRemain, mercuryRemain, venusRemain, marsRemain, jupiterRemain);
-      return true;
+      return this.remain;
     } else {
       let timeLeft = this.earthAge - lifeExpect;
       let earthExtra = parseFloat((timeLeft).toPrecision(4));
@@ -98,7 +98,7 @@ export class GalacticAge {
       let jupiterExtra = parseFloat((timeLeft / 11.86).toPrecision(4));
       this.remain.push("No", "No", "No", "No", "No");
       this.extra.push(earthExtra, mercuryExtra, venusExtra, marsExtra, jupiterExtra);
-      return true;
+      return this.extra;
     }
   }
 }
